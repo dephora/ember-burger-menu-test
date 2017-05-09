@@ -1,4 +1,7 @@
-{{#burger-menu as |burger|}}
+{{#burger-menu
+  dismissOnClick=dismissOnClick
+  dismissOnEsc=dismissOnEsc
+  as |burger|}}
   {{#burger.menu itemTagName="li" as |menu|}}
     <button {{action burger.state.actions.close}}>Close</button>
 
