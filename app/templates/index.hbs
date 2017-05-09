@@ -1,0 +1,24 @@
+{{#burger-menu as |burger|}}
+  {{#burger.menu itemTagName="li" as |menu|}}
+    <button {{action burger.state.actions.close}}>Close</button>
+
+    <ul>
+      {{#menu.item}}
+        {{link-to 'scrollable' 'scrollable'}}
+      {{/menu.item}}
+
+      {{#menu.item}}
+        et
+      {{/menu.item}}
+
+      {{#menu.item}}
+        test
+      {{/menu.item}}
+    </ul>
+  {{/burger.menu}}
+
+  {{#burger.outlet}}
+    <button {{action burger.state.actions.toggle}}>Menu</button>
+    {{outlet}}
+  {{/burger.outlet}}
+{{/burger-menu}}
